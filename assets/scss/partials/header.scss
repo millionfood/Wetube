@@ -1,0 +1,58 @@
+.header{
+    background-color: $red;
+    margin-bottom: 50px;
+    .header_wrapper{
+        padding: 5px 0;
+        width: 100%;
+        margin: 0 auto;
+        max-width: 1200px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        place-content: center center;
+        align-items: center;
+        .header_column{
+            
+            i {
+                color: white;
+                font-size: 30px;
+            }
+            &:nth-child(2){
+                width: 100%;
+                justify-self: center;
+            }
+            &:last-child{
+                justify-self: end;
+            }
+            ul{
+                display: flex;
+                font-weight: 600;
+                text-transform: uppercase;
+                li:not(:last-child){
+                    margin-right: 15px;
+                }
+                li{
+                    a{
+                        color: white;
+                        text-decoration: none;
+                    }
+                }
+            }
+            form{
+                width: 100%;
+                input{
+                    padding: 7px 10px;
+                    width: 100%;
+                    border-radius: 5px;
+                    font-size: 14px;
+                    font-weight: 600;
+                    &::placeholder{
+                        font-weight: 300;
+                        color: $black;
+                        opacity: 0.8;
+                    }
+                    
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,12 @@
+extends Layout/main
+
+block content
+    .form_container 
+        form(action=`${routes.users}${routes.editProfile}`,method='post',enctype='multipart/form-data')
+            div.fileUpload
+                label(for='avatar') Avatar
+                input(type="file", id="avatar", name="avatar", accept="image/*")
+            input(type='text', placeholder='Name',name='name',required=true,value=loggedUser.name)
+            input(type='text', placeholder='Email',name='email',required=true,value=loggedUser.email)
+            input(type='submit',value='Update Profile')
+        

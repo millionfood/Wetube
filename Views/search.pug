@@ -1,0 +1,16 @@
+extends Layout/main
+include mixins/videoBlock
+
+block content
+    .search_header  
+        h3 Searching for: #{searchingBy}
+    .search_videos 
+        if videos.length === 0
+            h5 No Videos Found
+        each potato in videos 
+            +videoBlock({
+                title:potato.title,
+                views:potato.views,
+                videoFile:potato.fileUrl,
+                id:potato.id
+            })
